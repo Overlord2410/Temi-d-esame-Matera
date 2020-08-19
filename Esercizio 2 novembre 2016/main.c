@@ -54,9 +54,7 @@ int funzione(sessione appelli_inv, sessione appelli_est){
         
         for (j = 0; j < 5; j++) {
             
-            if (strcmp(appelli_inv[i].codiceEsame, appelli_est[j].codiceEsame)
-                && (j != i)
-                ) {
+            if (strcmp(appelli_inv[i].codiceEsame, appelli_est[j].codiceEsame) && (j != i)) {
                 count[j]++;
             }
         }
