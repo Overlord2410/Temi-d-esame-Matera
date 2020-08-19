@@ -35,7 +35,7 @@ nodo2 *funzione(nodo1 *L1){
     
     for (cur = L1; cur != NULL; cur = cur -> next) {
         if (L2 == NULL) {
-            L2 = malloc(sizeof(nodo2*));
+            L2 = malloc(sizeof(nodo2));
             L2 -> val = L1 -> val;
             L2 -> occ = 0;
             L2 -> occ++;
@@ -48,7 +48,7 @@ nodo2 *funzione(nodo1 *L1){
                 }
             }
             if (flag != 1) {
-                cur2 = malloc(sizeof(nodo2*));
+                cur2 = malloc(sizeof(nodo2));
                 cur2 -> val = cur -> val;
                 cur2 -> occ++;
             }
