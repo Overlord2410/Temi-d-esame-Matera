@@ -29,6 +29,24 @@ int funzione(int mat[N][N]){
     return 1;
 }
 
+//versione ricorsiva
+int funzione_ric(int mat[N][N], int i, int j){
+    if (i == N) {
+        return mat[i][j];
+    }else{
+        
+        if (mat[i][j] != 0 || mat[i][i] != 1) {
+            return 0;
+        }else if (j == N) {
+            return funzione_ric(mat, i + 1, 0);
+        }else{
+            return funzione_ric(mat, i, j + 1);
+        }
+        
+    }
+    return 1;
+}
+
 int main(int argc, const char * argv[]) {
     
     return 0;
