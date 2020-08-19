@@ -25,6 +25,7 @@ int funzione(int mat[N][N], int i, int j){
     }
 }
 
+//N.B. in un ipotetico tema d'esame è bene specificare anche la chiamata dal main. per esempio qui, dove iniziallizziamo i parametri i e j a 0
 int main(int argc, const char * argv[]) {
     
     int mat[N][N];
