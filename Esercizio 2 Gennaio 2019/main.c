@@ -18,14 +18,16 @@
 
 void funzione(int n){
     if (n % 10 == 0) {
-        printf("%d", n);
+        printf("fine");
     }else{
         funzione(n / 10);
-        printf("%d", n);
+        printf("%d", n % 10);
     }
 }
 
 int main(int argc, const char * argv[]) {
+ 
+    funzione(123)
     
     return 0;
 }
