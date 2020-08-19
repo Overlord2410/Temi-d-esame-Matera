@@ -22,7 +22,7 @@ struct data{
 };
 
 struct data funzione(int array[N]){
-    int i, min = 10000, max = 0, sum = 0;
+    int i, min = 10000, max = 0, sum = 0;//l'unico problema sta nell'iniziallizazione del minimo. teoricamente dovrebbe essere iniziallizzato a +infinito
     struct data arr;
     
     for (i = 0; i < N; i++) {
