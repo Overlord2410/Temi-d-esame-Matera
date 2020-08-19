@@ -21,6 +21,27 @@ struct data{
     int sum_odd;
 };
 
+//prima versione ricorsiva che ritorna una struct contenente le somme
+struct data funzione_ric(int mat[N][N], int i, int j, struct data result){
+    if (i == N) {
+        
+    }else{
+        if (i % 2 == 0) {
+            result.sum_even += mat[i][j];
+        }else{
+            result.sum_odd += mat[i][j];
+        }
+        
+        if (j == N) {
+            return funzione_ric(mat, i + 1, 0, result);
+        }else{
+            return funzione_ric(mat, i, j + 1, result);
+        }
+    }
+    return result;
+}
+
+//versione iterativa della stessa funzione
 struct data funzione(int mat[N][M]){
     int i,j;
     struct data result;
@@ -40,6 +61,27 @@ struct data funzione(int mat[N][M]){
     return result;
 }
 
+//versione procedurale ricorsiva
+void funzione_ric2(int mat[N][N], int i, int j, struct data result){
+    if (i == N) {
+        
+    }else{
+        if (i % 2 == 0) {
+            result.sum_even += mat[i][j];
+        }else{
+            result.sum_odd += mat[i][j];
+        }
+        
+        if (j == N) {
+            funzione_ric(mat, i + 1, 0, result);
+        }else{
+            funzione_ric(mat, i, j + 1, result);
+        }
+    }
+    printf("somma pari: %d\nsomma dispari:%d\n", result.sum_even, result.sum_odd);
+}
+
+//versione procedurale iterativa della funzione
 void funzione_2(int mat[N][M]){
     int i,j;
     int sum_even = 0;
