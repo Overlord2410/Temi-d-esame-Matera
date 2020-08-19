@@ -26,6 +26,23 @@ int funzione(int mat[N][N]){
     return flag;
 }
 
+//spiegazione in esercizio 3 luglio 2019
+int is_simmetric_recursive(int mat[N][N], int i, int j){
+     if (i == N){
+         return 1;//True
+     }else if (mat[i][j] != mat[j][i]){
+         return 0;//False
+     }else{
+
+         if (j == N){
+             return is_simmetric_recursive(mat, i + 1, 0);
+         }else{
+             return is_simmetric_recursive(mat, i, j + 1);
+         }
+
+     }
+ }
+
 int main(int argc, const char * argv[]) {
     
     return 0;
