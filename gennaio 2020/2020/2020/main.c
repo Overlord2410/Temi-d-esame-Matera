@@ -15,19 +15,19 @@
 
 int funzione_ricorsiva(int index, int dim, int a[dim], int val){
     if (index == dim) {
-        if (val <= 0) { //alla fine, se il numero di negativi supera val, val e minore di zero
+        if (val < 0) { //alla fine, se il numero di negativi supera val, val è minore di zero
             return 1;
         }else{
             return 0;
         }
     }else{//vado avanti con index
         if (a[index] < 0) { // se l'elemento è minore di zero decremento val
-            funzione_ricorsiva(index + 1, dim, a, val - 1);
+            return funzione_ricorsiva(index + 1, dim, a, val - 1);
         }else{
-            funzione_ricorsiva(index + 1, dim, a, val);
+            return funzione_ricorsiva(index + 1, dim, a, val);
         }
     }
-    return -1; //messo nel debug per controllare se ci arriva la funzione, omettere nel etma d'esame oppure sostituire con return 0
+    
 }
 
 int main(int argc, const char * argv[]) {
